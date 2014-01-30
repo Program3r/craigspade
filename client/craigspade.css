@@ -1,0 +1,61 @@
+body{
+    background-image:url('/client/debut_dark.png');
+}
+.site.states{
+    width: 94%;
+}
+.white{
+    color:white;
+}
+#states .site{
+    width:200px;
+}
+.site {
+    padding: 15px;
+    border: 1px solid black;
+    margin: 5px;
+    border-radius: 10px;
+    background-color:white;
+    display:inline-block;
+}
+#states .ui-widget-content.ui-selected{
+    background:grey;
+}
+#states .ui-widget-content{
+    border:none;
+    padding: 4px;
+    margin-top: 3px;
+    border-radius: 5px;
+}
+#states .selectable.ui-selectable{
+    list-style-type:none;
+}
+.site.active{
+    background-color:green;
+}
+
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}

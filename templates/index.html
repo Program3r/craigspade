@@ -1,0 +1,41 @@
+<script src="/client/jquery-1.8.3.min.js"></script>
+<script src="/client/handlebars-v1.3.0.js"></script>
+<script src="/client/craigspade.js"></script>
+<script src="/client/jquery.isotope.min.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="/client/craigspade.css">
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<script id="body" type="text/x-handlebars-template">
+    <input type="text" placeholder="Search Query" id="search">
+    <button id="searchbtn">Download Results</button>
+     <h2 class="white">Emails</h2>
+    <div class="white" id="emails">
+    </div>
+    <h2 class="white">Regions</h2>
+    <div id="regions">
+          {{#each this}}
+                <div class="site">
+                    <div class='region' data-region="{{@key}}">{{@key}}</div>
+                </div>
+          {{/each}}
+    </div>
+    <h2 class="white">States</h2>
+    <button id="selectall">Select All</button><button id="selectnone">Select None</button>
+    <div id="states">
+        <ul class='states'>
+            {{#each this}}
+                {{#each ./states}}
+                    <div class='site' data-region="{{../name}}">
+                        <h5>{{@key}}</h5>
+                        <ul class="selectable">
+                            {{#each ./cities}}
+                                <li class="ui-widget-content">{{@key}}</li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                {{/each}}
+            {{/each}}
+        </ul>
+    </div>
+</script>
+
